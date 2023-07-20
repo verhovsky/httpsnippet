@@ -52,7 +52,7 @@ export const cohttp: Client = {
     // Add body
     if (postData.text) {
       // Just text
-      push(`let body = Cohttp_lwt_body.of_string ${JSON.stringify(postData.text)} in`);
+      push(`let body = Cohttp_lwt.Body.of_string ${JSON.stringify(postData.text)} in`);
     }
 
     // Do the request
